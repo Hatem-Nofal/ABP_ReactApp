@@ -7,7 +7,7 @@ import MenuItem from '../MenuItem/index';
 //   return null;
 // };
 
-class directory extends React.Component {
+class Directory extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -59,4 +59,4 @@ class directory extends React.Component {
   }
 }
 
-export default directory;
+export default Directory;
