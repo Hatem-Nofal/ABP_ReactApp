@@ -117,9 +117,10 @@ class Login extends React.Component<ILoginProps> {
                   </Col>
                   <Col>
                     <FormItem>
-                      {getFieldDecorator('tenancyName', {})(
-                        <Input placeholder={L('TenancyName')} prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} size="large" />
-                      )}
+                      {getFieldDecorator(
+                        'tenancyName',
+                        {}
+                      )(<Input placeholder={L('TenancyName')} prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} size="large" />)}
                     </FormItem>
                     {!getFieldValue('tenancyName') ? <div>{L('LeaveEmptyToSwitchToHost')}</div> : ''}
                   </Col>

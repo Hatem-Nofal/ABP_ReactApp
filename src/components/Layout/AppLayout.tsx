@@ -49,7 +49,7 @@ class AppLayout extends React.Component<any> {
           </Layout.Header>
           <Content style={{ margin: 16 }}>
             <Switch>
-              {pathname === '/' && <Redirect from="/" to="/dashboard" />}
+              {pathname === '/' && <Redirect from="/" to="/home" />}
               {appRouters
                 .filter((item: any) => !item.isLayout)
                 .map((route: any, index: any) => (
@@ -57,7 +57,7 @@ class AppLayout extends React.Component<any> {
                     exact
                     key={index}
                     path={route.path}
-                    render={props => <ProtectedRoute component={route.component} permission={route.permission} />}
+                    render={(props) => <ProtectedRoute component={route.component} permission={route.permission} />}
                   />
                 ))}
               {pathname !== '/' && <NotFoundRoute />}
